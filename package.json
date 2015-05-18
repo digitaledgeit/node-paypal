@@ -1,0 +1,24 @@
+{
+  "name": "@digitalegeit/paypal",
+  "version": "0.1.0",
+  "description": "A client for the PayPal classic NVP API.",
+  "keywords": [
+    "paypal",
+    "nvp",
+    "api"
+  ],
+  "main": "./lib/Client.js",
+  "dependencies": {
+    "go-fetch": "^2.1.0",
+    "go-fetch-content-type": "^0.3.0",
+    "go-fetch-parse-body": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/digitalegeit/node-paypal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalegeit/node-paypal/issues"
+  },
+  "license": "MIT"
+}
