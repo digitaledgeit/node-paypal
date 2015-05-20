@@ -10,22 +10,18 @@ A client for the PayPal classic NVP API.
 
 Balance check:
 
-    var PayPal = require('@digitaledgeit/paypal');
+    var paypal = require('@digitaledgeit/paypal');
     
-    var paypal = PayPal('username', 'password', 'signature');
-        
-    paypal.exec('GetBalance', function(err, res) {
+    paypal(cfg).exec('GetBalance', function(err, res) {
       if (err) return console.log(err);
       console.log('$'+res[0].AMT);
     });
 
 Transaction search:
 
-    var PayPal = require('@digitaledgeit/paypal');
+    var paypal = require('@digitaledgeit/paypal');
     
-    var paypal = PayPal('username', 'password', 'signature');
-    
-    paypal.exec('TransactionSearch', {STARTDATE: '2014-07-0T14:00:00Z'}, function(err, res) {
+    paypal(cfg).exec('TransactionSearch', {STARTDATE: '2014-07-0T14:00:00Z'}, function(err, res) {
       if (err) return console.err(err);
       
       var total = res
@@ -45,9 +41,14 @@ Transaction search:
 
 ### Methods
 
-#### new PayPal(username, password, signature)
+#### new PayPal(config)
 
 Create a new PayPal API client.
+
+- config.username
+- config.password
+- config.signature
+- config.sandbox
 
 #### .exec(method, [params], callback)
 
