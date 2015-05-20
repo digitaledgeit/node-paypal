@@ -1,6 +1,6 @@
 {
   "name": "@digitaledgeit/paypal",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A client for the PayPal classic NVP API.",
   "keywords": [
     "paypal",
